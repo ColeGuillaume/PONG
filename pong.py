@@ -1,8 +1,8 @@
 #Let's try to make pong together!!!!!!!!
 import turtle
 
-ycord1 = -100
-ycord2 = -100
+ycord1 = -110
+ycord2 = -150
 
 
 #Set up the screen
