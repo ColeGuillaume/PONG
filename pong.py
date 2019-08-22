@@ -1,9 +1,9 @@
-#Let's try to make pong together!!!!!!!!
-#This is soo cool
+#Let's try to make pong
 import turtle
 
-ycord1 = -110
-ycord2 = -150
+ycord1 = -100
+ycord2 = -100
+playerSpeed = 100
 
 
 #Set up the screen
@@ -47,9 +47,14 @@ def createBoard(bob,gameScreen,player1,player2,ball):
     
 
 def playGame(bob,gameScreen,player1,player2,ball):    
-    gameScreen.onkey(player1.goto(-460,ycord1+2),"up")
-    gameScreen.listen(None,None)
+    turtle.listen(None,None)
+    turtle.onkey(print("up"),"up")
+    delay = input("Press enter to finish")
 
+def moveUp(player):
+    newCord = player.ycor()
+    newCord += playerSpeed
+    player.sety(newCord)
 
 def main():
     bob = turtle.Turtle()
@@ -59,7 +64,13 @@ def main():
     gameScreen = turtle.setup(1000,750,startx=0,starty=0)
     
     createBoard(bob,gameScreen,player1,player2,ball)
-    playGame(bob,gameScreen,player1,player2,ball)
+    turtle.listen(None,None)
+    turtle.onkey(moveUp(player1),"Left")
+    
+    delay = input("Press enter to finish")
+    #playGame(bob,gameScreen,player1,player2,ball)
     print("Hello World")
 
+
 main()
+
