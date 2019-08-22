@@ -1,4 +1,5 @@
 #Let's try to make pong together!!!!!!!!
+#This is soo cool
 import turtle
 
 ycord1 = -110
